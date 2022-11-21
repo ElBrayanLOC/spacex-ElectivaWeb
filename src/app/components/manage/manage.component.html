@@ -1,0 +1,53 @@
+<form #form="ngForm" (ngSubmit)="accionRocket()">
+    <div class="mdl-card stock-card mdl-shadow--4dp" style="width: 100%;">
+        <div class="" >
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" placeholder="{{rocket.id}}" type="number" id="id" name="id"
+                            [(ngModel)]="rocket.id">
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" placeholder="Rocket name" type="text" id="name" name="name"
+                            [(ngModel)]="rocket.name">
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" placeholder="Description" type="text" id="description"
+                            name="description" [(ngModel)]="rocket.description">
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" placeholder="Height" type="number" id="height" name="height"
+                            [(ngModel)]="rocket.height">
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" placeholder="Country" type="text" id="country"
+                            name="country" [(ngModel)]="rocket.country">
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" placeholder="Image" type="text" id="image" name="image"
+                            [(ngModel)]="rocket.flickr_images[0]">
+                    </div>
+                    <img src="{{rocket.flickr_images[0]}}" />
+                </div>
+                <div class="mdl-cell mdl-cell--12-col" *ngIf="accionButton == 'Guardar'">
+                    <button id="button" type="submit"
+                        class="mdl-button mdl-js-button mdl-button--raised">Guardar</button>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col" *ngIf="accionButton == 'Editar'">
+                    <button id="button" type="submit"
+                        class="mdl-button mdl-js-button mdl-button--raised">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

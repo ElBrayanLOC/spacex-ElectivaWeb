@@ -1,0 +1,32 @@
+<div class="mdl-card stock-card mdl-shadow--2dp" [ngClass]="{increase:isPositive(), decrease:isNegative()}">
+    <div class="mdl-card__title">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+                <h4 style="color: #FFF; margin: 0">{{rocket.name}}</h4>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                {{rocket.height}}
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                {{rocket.country}}
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+                <img src="{{rocket.flickr_images[0]}}" width="250" alt="{{rocket.name}}" />
+            </div>
+
+            <table>
+                <th>
+                    <button type="button" style="background-color: rgba(221, 115, 115, 0.635);"
+                        class="mdl-button mdl-js-button mdl-button--raised" (click)="delete(rocket.id)">
+                        Eliminar
+                    </button>
+                </th>
+                <th>
+                    <button type="button" style="background-color: rgba(221, 210, 115, 0.635);"
+                        class="mdl-button mdl-js-button mdl-button--raised" [routerLink]="['/edit/'+rocket.id]">
+                        Editar
+                    </button>
+                </th>
+            </table>
+        </div>
+    </div>

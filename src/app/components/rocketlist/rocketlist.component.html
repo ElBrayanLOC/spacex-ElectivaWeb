@@ -1,0 +1,8 @@
+<div class="mdl-layout">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col" *ngIf="!rockets" style="text-align:center;">Loading</div>
+        <div class="mdl-cell mdl-cell--4-col" *ngFor="let rocket of rockets">
+            <rocket [rocket]="rocket"></rocket>
+        </div>
+    </div>
+</div>
